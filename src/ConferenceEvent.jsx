@@ -129,8 +129,8 @@ const getItemsFromTotalCost = () => {
     return totalCost;
     };
     const venueTotalCost = calculateTotalCost("venue");
-const avTotalCost = calculateTotalCost("av");
-const mealsTotalCost = calculateTotalCost("meals");
+    const avTotalCost = calculateTotalCost("av");
+    const mealsTotalCost = calculateTotalCost("meals");
     const navigateToProducts = (idType) => {
         if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
           if (showItems) { // Check if showItems is false
@@ -252,9 +252,8 @@ const mealsTotalCost = calculateTotalCost("meals");
                                 </div>
                                 <div className="input-container venue_selection">
                                 <div className="input-container venue_selection">
-    <label htmlFor="numberOfPeople"><h3>Number of People:</h3></label>
-    <input type="number" className="input_box5" id="numberOfPeople" value={numberOfPeople}
-        onChange={(e) => setNumberOfPeople(parseInt(e.target.value))}
+                                    <label htmlFor="numberOfPeople"<h3>Number of People:</h3></label>
+                                    <input type="number" className="input_box5" id="numberOfPeople" value={numberOfPeople} onChange={(e) => setNumberOfPeople(parseInt(e.target.value))}
         min="1"
     />
 </div>
@@ -273,10 +272,10 @@ const mealsTotalCost = calculateTotalCost("meals");
                                         </div>
                                     ))}
                                 </div>
-<div className="total_cost">Total Cost: {mealsTotalCost}</div>
+                                <div className="total_cost">Total Cost: {mealsTotalCost}</div>
                             </div>
                         </div>
-                    ) : (
+                ) : (
                         <div className="total_amount_detail">
     <TotalCost totalCosts={ totalCosts } ItemsDisplay={() => <ItemsDisplay items={ items } />} />
 </div>
